@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './static/logo.svg';
+import './static/App.css';
+import TodoItem from './TodoItem';
+import todosData from './todosData';
+
 
 function App() {
+  const nashListOfTODO=todosData.map(fordst=>{return(<TodoItem id={fordst.id} text={fordst.text} completed= {fordst.completed} />)})
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {nashListOfTODO}
+      
     </div>
   );
 }
