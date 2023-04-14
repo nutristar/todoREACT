@@ -1,0 +1,10 @@
+.dialogs{
+    display: grid;
+    grid-template-areas: "u m";
+}
+.messages{
+    grid-area: m;
+}
+.users{
+    grid-area: u;
+}

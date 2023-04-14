@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
 .App {
   text-align: center;
 }
@@ -22,6 +26,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.app-wrapper{
+  display: grid;
+  grid-template-areas: 
+  "h h h"
+  "n c c";
+  grid-template-rows: 160px 100% 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+.header{
+ grid-area: h;
+ background-color: green;
+ 
+}
+.nav{
+  grid-area: n;
+  background-color: green;
+  height:150%;
+}
+
+.content{
+  grid-area: c;
+  /* height:100%; */
 }
 
 .App-link {
